@@ -1,0 +1,28 @@
+{
+  "endOfLine": "auto",
+  "semi": true,
+  "printWidth": 120,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "importOrderSeparation": true,
+  "importOrder": [
+    "^(@/pages)(.*|$)",
+    "^(@/layouts)(.*|$)",
+    "^(@/components/_common)(.*|$)",
+    "^(@/components)(.*|$)",
+    "^(@/hooks)(.*|$)",
+    "^(@/recoil)(.*|$)",
+    "@/apis",
+    "^(@/types)(.*|$)",
+    "^(@/constants/)(.*|$)",
+    "^(@/assets/)(.*|$)",
+    "^(@/portals/)(.*|$)",
+    "^(@/styles)(.*|$)",
+    "^(./styles)(.*|$)",
+    "^(./config)(.*|$)"
+  ]
+}

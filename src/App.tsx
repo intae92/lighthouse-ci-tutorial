@@ -8,6 +8,7 @@ const App = () => {
 
   return (
     <div>
+      <h1>안녕하세요</h1>
       <p>{count}</p>
       <button onClick={upCount}>up</button>
       <button onClick={downCount}>down</button>

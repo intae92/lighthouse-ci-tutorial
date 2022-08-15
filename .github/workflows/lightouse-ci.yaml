@@ -61,8 +61,7 @@ jobs:
                 `⚡️ Lighthouse report!`,
                 `| Category | Score |`,
                 `| --- | --- |`,
-                `| ${score(summary.performance)} Performance | ${summary.performance} |`,
-                { ... }
+                `| ${score(summary.performance)} Performance | ${summary.performance} |`
               ].join("\n");
 
               const detail = [
@@ -72,11 +71,10 @@ jobs:
                   audits["first-contentful-paint"].score * 100
                 )} First Contentful Paint | ${
                   audits["first-contentful-paint"].displayValue
-                } |`,
-                { ... }
+                } |`
               ].join("\n");
 
               console.log('comment',comment);
               console.log('detail',detail);
-              
+
             });

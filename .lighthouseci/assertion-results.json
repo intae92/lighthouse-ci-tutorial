@@ -12,7 +12,7 @@
     "passed": false,
     "auditId": "apple-touch-icon",
     "level": "error",
-    "url": "http://localhost:57675/",
+    "url": "http://localhost:57773/",
     "auditTitle": "Does not provide a valid `apple-touch-icon`",
     "auditDocumentationLink": "https://web.dev/apple-touch-icon/"
   },
@@ -29,7 +29,7 @@
     "passed": false,
     "auditId": "csp-xss",
     "level": "error",
-    "url": "http://localhost:57675/",
+    "url": "http://localhost:57773/",
     "auditTitle": "Ensure CSP is effective against XSS attacks",
     "auditDocumentationLink": "https://web.dev/csp-xss/"
   },
@@ -46,7 +46,7 @@
     "passed": false,
     "auditId": "installable-manifest",
     "level": "error",
-    "url": "http://localhost:57675/",
+    "url": "http://localhost:57773/",
     "auditTitle": "Web app manifest or service worker do not meet the installability requirements",
     "auditDocumentationLink": "https://web.dev/installable-manifest/"
   },
@@ -63,24 +63,24 @@
     "passed": false,
     "auditId": "maskable-icon",
     "level": "error",
-    "url": "http://localhost:57675/",
+    "url": "http://localhost:57773/",
     "auditTitle": "Manifest doesn't have a maskable icon",
     "auditDocumentationLink": "https://web.dev/maskable-icon-audit/"
   },
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0.62,
+    "actual": 0.66,
     "values": [
-      0.6,
-      0.62,
-      0.61
+      0.63,
+      0.66,
+      0.65
     ],
     "operator": ">=",
     "passed": false,
     "auditId": "max-potential-fid",
     "level": "warn",
-    "url": "http://localhost:57675/",
+    "url": "http://localhost:57773/",
     "auditTitle": "Max Potential First Input Delay",
     "auditDocumentationLink": "https://web.dev/lighthouse-max-potential-fid/"
   },
@@ -97,7 +97,7 @@
     "passed": false,
     "auditId": "meta-description",
     "level": "error",
-    "url": "http://localhost:57675/",
+    "url": "http://localhost:57773/",
     "auditTitle": "Document does not have a meta description",
     "auditDocumentationLink": "https://web.dev/meta-description/"
   },
@@ -114,7 +114,7 @@
     "passed": false,
     "auditId": "service-worker",
     "level": "error",
-    "url": "http://localhost:57675/",
+    "url": "http://localhost:57773/",
     "auditTitle": "Does not register a service worker that controls page and `start_url`",
     "auditDocumentationLink": "https://web.dev/service-worker/"
   },
@@ -131,7 +131,7 @@
     "passed": false,
     "auditId": "splash-screen",
     "level": "error",
-    "url": "http://localhost:57675/",
+    "url": "http://localhost:57773/",
     "auditTitle": "Is not configured for a custom splash screen",
     "auditDocumentationLink": "https://web.dev/splash-screen/"
   },
@@ -148,7 +148,7 @@
     "passed": false,
     "auditId": "tap-targets",
     "level": "error",
-    "url": "http://localhost:57675/",
+    "url": "http://localhost:57773/",
     "auditTitle": "Tap targets are not sized appropriately",
     "auditDocumentationLink": "https://web.dev/tap-targets/"
   },
@@ -165,7 +165,7 @@
     "passed": false,
     "auditId": "themed-omnibox",
     "level": "error",
-    "url": "http://localhost:57675/",
+    "url": "http://localhost:57773/",
     "auditTitle": "Does not set a theme color for the address bar.",
     "auditDocumentationLink": "https://web.dev/themed-omnibox/"
   },
@@ -182,7 +182,7 @@
     "passed": false,
     "auditId": "valid-source-maps",
     "level": "error",
-    "url": "http://localhost:57675/",
+    "url": "http://localhost:57773/",
     "auditTitle": "Missing source maps for large first-party JavaScript",
     "auditDocumentationLink": "https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps"
   }

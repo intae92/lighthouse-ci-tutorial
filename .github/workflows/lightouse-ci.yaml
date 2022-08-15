@@ -43,7 +43,7 @@ jobs:
             const results = JSON.parse(fs.readFileSync('${{ github.workspace }}/lhci_reports/manifest.json'));
             let comments = "";
 
-            results[0].forEach((result) => {
+            results.forEach((result) => {
               const { summary, jsonPath } = result;
 
               const details = JSON.parse(fs.readFileSync(jsonPath));
@@ -61,7 +61,11 @@ jobs:
                 `⚡️ Lighthouse report!`,
                 `| Category | Score |`,
                 `| --- | --- |`,
-                `| ${score(summary.performance)} Performance | ${summary.performance} |`
+                `| ${score(summary.performance)} Performance | ${summary.performance} |`,
+                `| ${score(summary.accessibility)} Accessibility | ${summary.accessibility} |`,
+                `| ${score(summary[`best-practices`])} Best Practices | ${summary[`best-practices`]} |`,
+                `| ${score(summary.seo)} Seo | ${summary.seo} |`,
+                `| ${score(summary.pwa)} Pwa | ${summary.pwa} |`
               ].join("\n");
 
               const detail = [

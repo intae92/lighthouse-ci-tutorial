@@ -26,12 +26,12 @@ jobs:
         run: |
           npm run build
 
-      # - name: Run Lighthouse CI
-      #   env:
-      #     LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-      #   run: |
-      #     npm install -g @lhci/cli
-      #     lhci autorun || echo "LHCI failed!"
+      - name: Run Lighthouse CI
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+        run: |
+          npm install -g @lhci/cli
+          lhci autorun || echo "LHCI failed!"
 
       - name: Format lighthouse score
         id: format_lighthouse_score

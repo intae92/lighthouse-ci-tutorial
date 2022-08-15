@@ -43,48 +43,44 @@ jobs:
             const results = JSON.parse(fs.readFileSync('${{ github.workspace }}/lhci_reports/manifest.json'));
             let comments = "";
 
-            results.forEach((result) => {
-              const { summary, jsonPath } = result;
 
-              const details = JSON.parse(fs.readFileSync(jsonPath));
-              const { audits } = details;
+            const { summary, jsonPath } = results[0];
 
-              const formatResult = (res) => Math.round(res * 100);
+            const details = JSON.parse(fs.readFileSync(jsonPath));
+            const { audits } = details;
 
-              Object.keys(summary).forEach(
-                (key) => (summary[key] = formatResult(summary[key]))
-              );
+            const formatResult = (res) => Math.round(res * 100);
 
-              const score = (res) => (res >= 90 ? "🟢" : res >= 50 ? "🟠" : "🔴");
+            Object.keys(summary).forEach(
+              (key) => (summary[key] = formatResult(summary[key]))
+            );
 
-              const comment = [
-                `⚡️ Lighthouse report!`,
-                `| Category | Score |`,
-                `| --- | --- |`,
-                `| ${score(summary.performance)} Performance | ${summary.performance} |`,
-                `| ${score(summary.accessibility)} Accessibility | ${summary.accessibility} |`,
-                `| ${score(summary[`best-practices`])} Best Practices | ${summary[`best-practices`]} |`,
-                `| ${score(summary.seo)} Seo | ${summary.seo} |`,
-                `| ${score(summary.pwa)} Pwa | ${summary.pwa} |`
-              ].join("\n");
+            const score = (res) => (res >= 90 ? "🟢" : res >= 50 ? "🟠" : "🔴");
 
-              const detail = [
-                `| Category | Score |`,
-                `| --- | --- |`,
-                `| ${score(
-                  audits["first-contentful-paint"].score * 100
-                )} First Contentful Paint | ${
-                  audits["first-contentful-paint"].displayValue
-                } |`
-              ].join("\n");
+            const comment = [
+              `⚡️ Lighthouse report!`,
+              `| Category | Score |`,
+              `| --- | --- |`,
+              `| ${score(summary.performance)} Performance | ${summary.performance} |`,
+              `| ${score(summary.accessibility)} Accessibility | ${summary.accessibility} |`,
+              `| ${score(summary[`best-practices`])} Best Practices | ${summary[`best-practices`]} |`,
+              `| ${score(summary.seo)} Seo | ${summary.seo} |`,
+              `| ${score(summary.pwa)} Pwa | ${summary.pwa} |`
+            ].join("\n");
 
-              comments += comment + "\n" + detail + "\n";
+            const detail = [
+              `| Category | Score |`,
+              `| --- | --- |`,
+              `| ${score(
+                audits["first-contentful-paint"].score * 100
+              )} First Contentful Paint | ${
+                audits["first-contentful-paint"].displayValue
+              } |`
+            ].join("\n");
 
-              console.log('comment',comment);
-              console.log('detail',detail);
-              console.log('comments',comments);
+            comments += comment + "\n" + detail + "\n";
 
-            });
+            console.log('audits',audits);
             core.setOutput('comments', comments);
 
       - name: comment PR

@@ -41,7 +41,8 @@ jobs:
             # comment를 담을 변수 입니다.
             let comments = "";
 
-            results.forEach((result) => {
+            results.forEach((result) => 
+            {
               const { summary, jsonPath } = result;
               const { audits } = details;
 
@@ -55,7 +56,8 @@ jobs:
               # 점수가 색상으로 구분되는 방식 (https://web.dev/performance-scoring/#color-coding)
               const score = (res) => (res >= 90 ? "🟢" : res >= 50 ? "🟠" : "🔴");
 
-              const comment = [
+              const comment = 
+              [
                 `⚡️ Lighthouse report!`,
                 `| Category | Score |`,
                 `| --- | --- |`,
@@ -63,7 +65,8 @@ jobs:
                 { ... }
               ].join("\n");
 
-              const detail = [
+              const detail = 
+              [
                 `| Category | Score |`,
                 `| --- | --- |`,
                 `| ${score(

@@ -69,6 +69,7 @@ jobs:
             ].join("\n");
 
             const detail = [
+              ``,
               `| Category | Score |`,
               `| --- | --- |`,
               `| ${score(
@@ -78,7 +79,7 @@ jobs:
               } |`
             ].join("\n");
 
-            comments += comment + "\n " + detail + "\n";
+            comments += comment + "\n" + detail + "\n";
 
             console.log('audits',audits);
             core.setOutput('comments', comments);

@@ -1,0 +1,41 @@
+[
+  {
+    "url": "http://localhost:57675/",
+    "isRepresentativeRun": false,
+    "htmlPath": "/Users/kit/Desktop/my/lighthouse-ci-tutorial/lhci_reports/_-2022_08_15_13_17_44-report.html",
+    "jsonPath": "/Users/kit/Desktop/my/lighthouse-ci-tutorial/lhci_reports/_-2022_08_15_13_17_44-report.json",
+    "summary": {
+      "performance": 0.92,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.86,
+      "pwa": 0.3
+    }
+  },
+  {
+    "url": "http://localhost:57675/",
+    "isRepresentativeRun": false,
+    "htmlPath": "/Users/kit/Desktop/my/lighthouse-ci-tutorial/lhci_reports/_-2022_08_15_13_17_54-report.html",
+    "jsonPath": "/Users/kit/Desktop/my/lighthouse-ci-tutorial/lhci_reports/_-2022_08_15_13_17_54-report.json",
+    "summary": {
+      "performance": 0.93,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.86,
+      "pwa": 0.3
+    }
+  },
+  {
+    "url": "http://localhost:57675/",
+    "isRepresentativeRun": true,
+    "htmlPath": "/Users/kit/Desktop/my/lighthouse-ci-tutorial/lhci_reports/_-2022_08_15_13_17_34-report.html",
+    "jsonPath": "/Users/kit/Desktop/my/lighthouse-ci-tutorial/lhci_reports/_-2022_08_15_13_17_34-report.json",
+    "summary": {
+      "performance": 0.93,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.86,
+      "pwa": 0.3
+    }
+  }
+]

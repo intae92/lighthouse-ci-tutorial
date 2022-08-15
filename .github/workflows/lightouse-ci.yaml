@@ -74,7 +74,18 @@ jobs:
                 } |`
               ].join("\n");
 
+              comments += comment + "\n" + detail + "\n";
+
               console.log('comment',comment);
               console.log('detail',detail);
+              console.log('comments',comments);
 
             });
+            core.setOutput('comments', comments);
+
+      - name: comment PR
+        uses: unsplash/comment-on-pr@v1.3.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          msg: ${{ steps.format_lighthouse_score.outputs.comments}}

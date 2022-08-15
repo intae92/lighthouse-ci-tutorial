@@ -42,4 +42,7 @@ jobs:
             const fs = require('fs');
             const results = JSON.parse(fs.readFileSync('${{ github.workspace }}/lhci_reports/manifest.json'));
             let comments = "";
-            console.log('coke', results);
+            results.forEach((result) => {
+              const { summary, jsonPath } = result;
+              console.log(summary, jsonPath);
+            });
